@@ -1,8 +1,8 @@
-# 🏦 J. POO Morgan Chase & Co. — Java
+# J. POO Morgan Chase & Co. — Java
 
 A banking system simulation built with OOP principles and multiple design patterns.
 
-## 🏗️ Class Structure
+## Class Structure
 ```
 User
  └── Account (classic / savings / business)
@@ -13,7 +13,7 @@ User
       └── Transaction (Builder)
 ```
 
-## 🎨 Design Patterns
+## Design Patterns
 
 | Pattern | Where | Why |
 |---|---|---|
@@ -22,7 +22,7 @@ User
 | **Factory** | `AccountFactory` | Encapsulates creation of classic, savings, and business accounts |
 | **Strategy** | `CashbackStrategy` | Pluggable cashback logic — by transaction count or spending threshold |
 
-## 🔧 Key Components
+## Key Components
 
 - **`PayOnline`** — finds merchant → converts amount via `Converter` → calculates commission → validates funds → records transaction
 - **`SendMoney`** — same pipeline as `PayOnline` with sender/receiver account resolution
@@ -32,7 +32,7 @@ User
 - **`SavingsAccount`** — extends `Account` with interest rate support
 - **`OneTimeCard`** — extends `Card`; auto-freezes after a single use
 
-## 💡 Design Decisions
+## Design Decisions
 
 - Each command has its **own class** for separation of concerns
 - **Static variables** prevent repeated instantiation of utility objects
